@@ -25,6 +25,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    externalNativeBuild {
+        cmake {
+            path file('CMakeLists.txt')
+        }
+    }
 
 }
 
@@ -63,12 +68,12 @@ tasks.withType(Javadoc).all {
 }
 
 ext {
-    bintrayRepo = 'JSLibrary'
-    bintrayName = 'JSLibrary'
+    bintrayRepo = 'jslibrary'
+    bintrayName = 'jslibrary'
 
     publishedGroupId = 'com.sundblom.library'
-    libraryName = 'JSLibrary'
-    artifact = 'JSLibrary'
+    libraryName = 'jslibrary'
+    artifact = 'jslibrary'
 
     libraryDescription = 'This view is a Test.'
 
